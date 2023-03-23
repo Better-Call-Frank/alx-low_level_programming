@@ -2,17 +2,14 @@
 
 /**
  * main - checks for a digit 0 through 9
- * @c: The digit to be checked
+ * @c: The character to be checked
  * Return: 1 if it is a digit or 0 if otherwise
  */
 int _isdigit(int c);
 {
-	if(c >= '0' && c <= '9')
+	if (c >= 48 && c <= 57)
 	{
-	return 1;
+	return (1);
 	}
-	else
-	{
-	return 0;
-	}
+	return (0);
 }
