@@ -3,8 +3,9 @@
 /**
  * _puts_recursion - Prints string followed by new line
  * @s: Input
- * Return: Alwaays 0 (Success)
+ * Return: Always 0 (Success)
  */
+void _puts_recursion(char *s);
 {
 	if (*s)
 	{
