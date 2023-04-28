@@ -1,13 +1,17 @@
 #include <stdio.h>
 
-void first(void) __attribute__ ((constructor));
-
-/**
- * first - prints a sentence before the main
- * function is executed
- */
-void first(void)
+void print_first_sentence(void)
 {
 	printf("You're beat! and yet, you must allow,\n");
-	printf("I bore my house upon my back!\n");
+}
+
+void print_second_sentence(void)
+{
+    printf("I bore my house upon my back!\n");
+}
+
+void __attribute__((constructor)) run_before_main()
+{
+    print_first_sentence();
+    print_second_sentence();
 }
