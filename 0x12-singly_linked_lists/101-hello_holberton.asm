@@ -6,17 +6,8 @@ section .text
     extern printf
 
 main:
-    push rbp
-    mov rbp, rsp
-
-    sub rsp, 16
-
-    lea rdi, [format]
-    xor eax, eax
-    call printf
-
-    add rsp, 16
-
-    mov rsp, rbp
-    pop rbp
-    ret
+	mov   edi, format
+	  xor   eax, eax
+	  call  printf
+	  mov 	eax, 0
+	  ret
